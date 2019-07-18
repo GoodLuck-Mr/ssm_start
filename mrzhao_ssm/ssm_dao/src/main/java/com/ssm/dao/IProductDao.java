@@ -22,8 +22,8 @@ public interface IProductDao {
      * 添加一条产品的方法
      * @param product
      */
-   @Insert("insert into PRODUCT ( productNum, productName, cityName, departureTime, productPrice, productDesc, productStatus)" +
-           "values (#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
+   @Insert("insert into PRODUCT " +
+           "values (#{id},#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
     void  save(Product product)throws Exception;
 
     /**

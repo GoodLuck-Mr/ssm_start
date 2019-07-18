@@ -36,15 +36,7 @@ public class UserServiceImpl implements IUserService {
             e.printStackTrace();
         }
 
-        /*
-		username;
-	    password;
-		tenabled;
-		accountNonExpired;
-		credentialsNonExpired;
-		accountNonLocked;
-		Collections.unmodifiableSet(sortAuthorities(authorities));*/
-        User user = new User(info.getUsername(),info.getPassword(), true, true,
+        User user = new User(info.getUsername(),"{noop}"+info.getPassword(), true, true,
                 true, true, getAuthority(info.getRoles()));
         return user;
     }

@@ -38,7 +38,8 @@
                     <property name="properties">
                         <props>
                             <!--指定数据库类型-->
-                            <prop key="helperDialect">oracle</prop>
+                          <!--  <prop key="helperDialect">oracle</prop>-->
+                            <prop key="helperDialect">mysql</prop>
                             <!--分页合理化参数，开启-->
                             <prop key="reasonable">true</prop>
                         </props>

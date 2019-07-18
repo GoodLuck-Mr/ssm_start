@@ -1,5 +1,6 @@
 package com.ssm.domain;
 
+import com.ssm.utils.UuidUtils;
 import java.io.Serializable;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class UserInfo implements Serializable {
     private List<Role> roles;
 
     public String getId() {
-        return id;
+        return UuidUtils.creatUUID();
     }
 
     public void setId(String id) {

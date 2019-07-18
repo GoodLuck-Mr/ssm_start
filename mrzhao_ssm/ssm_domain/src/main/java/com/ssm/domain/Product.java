@@ -1,6 +1,7 @@
 package com.ssm.domain;
 
 import com.ssm.utils.DateUtils;
+import com.ssm.utils.UuidUtils;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
@@ -25,7 +26,7 @@ public class Product implements Serializable {
     private String productStatusStr;
 
     public String getId() {
-        return id;
+        return UuidUtils.creatUUID();
     }
 
     public void setId(String id) {

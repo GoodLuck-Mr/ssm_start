@@ -13,7 +13,7 @@ public interface IUserService extends UserDetailsService {
     List<UserInfo> findAll(int page,int pageSize)throws Exception;
 
     /**
-     * 添加一个用户的方法
+     * 添加一个用户的方法a
      * @param userInfo
      */
     void save(UserInfo userInfo)throws Exception;

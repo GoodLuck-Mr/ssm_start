@@ -38,4 +38,12 @@ public interface IRoleDao {
     @Select("select * from role where id = #{id}")
     @ResultMap("perMap")
     Role findById(String id)throws Exception;
+
+
+    /**
+     * 添加一条角色数据
+     * @param role
+     */
+    @Insert("insert into role values (#{id},#{roleName},#{roleDesc})")
+    void save(Role role)throws Exception;
 }

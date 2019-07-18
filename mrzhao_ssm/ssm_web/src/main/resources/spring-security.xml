@@ -23,8 +23,7 @@
     -->
     <security:http auto-config="true" use-expressions="false">
         <!-- 配置具体的拦截的规则 pattern="请求路径的规则" access="访问系统的人，必须有ROLE_USER的角色" -->
-        <security:intercept-url pattern="/**" access="ROLE_坦克"/>
-      <!--  <security:intercept-url pattern="/**" access="hasAnyRole('坦克','法师','辅助','战士','刺客')"/>-->
+        <security:intercept-url pattern="/**" access="ROLE_CEO,ROLE_CTO,ROLE_HR,ROLE_CSP"/>
         <!-- <security:intercept-url pattern="/xxx" access="hasAnyRole('CEO','CTO','HR','CSP')"/>-->
 
             <!-- 定义跳转的具体的页面 -->
@@ -46,7 +45,7 @@
     <security:authentication-manager>
         <security:authentication-provider user-service-ref="userService">
             <!-- 配置加密的方式 -->
-      <security:password-encoder  ref="passwordEncoder"/>
+      <!--<security:password-encoder  ref="passwordEncoder"/>-->
         </security:authentication-provider>
     </security:authentication-manager>
 

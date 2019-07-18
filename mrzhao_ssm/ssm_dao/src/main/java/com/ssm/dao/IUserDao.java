@@ -35,7 +35,7 @@ public interface IUserDao {
      * 添加一个用户的方法
      * @param userInfo
      */
-    @Insert("insert into users (email,username,password,phoneNum,status) values (#{email},#{username},#{password},#{phoneNum},#{status})")
+    @Insert("insert into users  values (#{id},#{email},#{username},#{password},#{phoneNum},#{status})")
     void save(UserInfo userInfo)throws Exception;
 
 
